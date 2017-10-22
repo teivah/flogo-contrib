@@ -1,0 +1,43 @@
+{
+  "name": "tibco-etcd",
+  "type": "flogo:activity",
+  "ref": "github.com/teivah/flogo-contrib/activity/etcd",
+  "version": "5.0.0.0",
+  "title": "etcd connector",
+  "description": "etcd integration",
+  "homepage": "https://github.com/teivah/flogo-contrib/tree/master/activity/etcd",
+  "inputs": [
+    {
+      "name": "key",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "value",
+      "type": "string"
+    },
+    {
+      "name": "method",
+      "type": "string",
+      "allowed": [
+        "Create",
+        "Get",
+        "Update",
+        "Delete"
+      ],
+      "value": "Create",
+      "required": true
+    },
+    {
+      "name": "servers",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "type": "any"
+    }
+  ]
+}
